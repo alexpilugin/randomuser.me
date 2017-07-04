@@ -1,0 +1,108 @@
+@import "node_modules/normalize-scss/sass/_normalize";
+@include normalize();
+
+*, *:before, *:after {
+  box-sizing: border-box !important;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background: #EEE;
+}
+.img-circle {
+    border-radius: 50%;
+    display:block;
+}
+.person {
+
+    background-color: white;
+    -webkit-box-shadow: 0px 8px 20px -9px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 8px 20px -9px rgba(0,0,0,0.55);
+    box-shadow: 0px 8px 20px -9px rgba(0,0,0,0.55);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    -webkit-align-content: center;
+    align-content: center;
+    border-radius: 6px;
+}
+.panel {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.showMore {
+    display: block;
+    clear: both;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    -webkit-align-content: center;
+    align-content: center;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+/* max-width 640px, mobile-only styles */
+@media only screen and (max-width: 40.063em) { 
+    .pic-medium,
+    .pic-large {
+        display: none;
+    }
+    .panel {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+    }
+    .person {
+        width: 86%; 
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        clear: both;      
+    }
+
+} 
+
+/* min-width 641px and max-width 1024px */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .pic-thumbnail,
+    .pic-large{
+        display: none;
+    }
+    .panel {
+        display: flex; /* or inline-flex */
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 720px;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .person {
+        width: 320px;       
+    }
+} 
+
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) { 
+    .pic-thumbnail,
+    .pic-medium {
+        display: none;
+    }
+    .panel {
+        display: flex; /* or inline-flex */
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 1020px;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .person {
+        width: 300px;       
+    }
+} 
